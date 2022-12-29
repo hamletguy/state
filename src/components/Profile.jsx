@@ -9,8 +9,8 @@ class Profile extends Component {
         bio: "i am an unknown man that does not exist",
         imgsrc: img,
         profession: "wants to be a squirel",
-        timer: 0,
       },
+      timer: 0,
     };
   }
 
@@ -25,16 +25,15 @@ class Profile extends Component {
   };
 
   render() {
+    const { person, timer } = this.state;
+    const { fullname, bio, imgsrc, profession } = person;
     return (
       <div>
-        <img
-          src={this.state.person.imgsrc}
-          alt="img"
-          style={{ borderRadius: "50%" }}
-        />
-        <div>{this.state.person.fullname}</div>
-        <div>{this.state.profile.bio}</div>
-        <div>{this.state.profile.profession}</div>
+        <img src={imgsrc} alt="img" style={{ borderRadius: "50%" }} />
+        <div>{fullname}</div>
+        <div>{bio}</div>
+        <div>{profession}</div>
+        <div>{timer}</div>
       </div>
     );
   }

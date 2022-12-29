@@ -12,12 +12,13 @@ class App extends Component {
   };
 
   render() {
+    const { Visible } = this.state;
     return (
       <div className="App">
         <button className="btn" onClick={this.Visibility}>
-          {this.state.Visible ? "Hide Profile" : "Show Profile"}
+          {Visible ? "Hide Profile" : "Show Profile"}
         </button>
-        {this.state.Visible && <Profile />}
+        {Visible && <Profile />}
       </div>
     );
   }
